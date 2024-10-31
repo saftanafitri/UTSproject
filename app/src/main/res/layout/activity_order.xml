@@ -1,94 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    tools:context=".OrderActivity">
+    tools:context=".OrderActivity"
+    android:background="@color/pink_soft_background">
 
-        <!-- Judul Halaman -->
-        <TextView
-            android:id="@+id/tvTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Order Food"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="16dp"/>
-
-        <!-- Input Nama Makanan -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Food Name"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
-        <TextView
-            android:id="@+id/etFoodName"
+        <!-- Kontainer CardView untuk Form -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter food name - Get From List"
-            android:padding="12dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/pink_soft_background">
 
-        <!-- Input Jumlah Porsi -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Number of Servings"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
-        <EditText
-            android:id="@+id/etServings"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter number of servings"
-            android:inputType="number"
-            android:padding="12dp"
-            android:layout_marginBottom="16dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:orientation="vertical">
 
-        <!-- Input Jumlah Porsi -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ordering Name"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
-        <EditText
-            android:id="@+id/etName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ordering name by"
-            android:padding="12dp"
-            android:layout_marginBottom="16dp"/>
+                        <!-- Judul Form -->
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Order Food"
+                            android:textSize="24sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/dark_pink"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="16dp" />
 
+                        <!-- Input Nama Makanan -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Food Name"
+                            android:textStyle="bold"
+                            android:textColor="@color/dark_pink"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="8dp" />
+                        <EditText
+                            android:id="@+id/etFoodName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:hint="Enter food name - Get From List"
+                            android:padding="12dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/edittext_background_pink" />
 
-        <!-- Input Catatan Tambahan -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Additional Notes"
-            android:textSize="18sp"
-            android:layout_marginBottom="8dp"/>
-        <EditText
-            android:id="@+id/etNotes"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter any additional notes"
-            android:padding="12dp"
-            android:layout_marginBottom="16dp"/>
+                        <!-- Input Jumlah Porsi -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Number of Servings"
+                            android:textStyle="bold"
+                            android:textColor="@color/dark_pink"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="8dp" />
+                        <EditText
+                            android:id="@+id/etServings"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:hint="Enter number of servings"
+                            android:inputType="number"
+                            android:padding="12dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/edittext_background_pink" />
 
-        <!-- Tombol Order -->
-        <Button
-            android:id="@+id/btnOrder"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Place Order"
-            android:textColor="@android:color/white"
-            android:padding="12dp"/>
+                        <!-- Input Nama Pemesan -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ordering Name"
+                            android:textStyle="bold"
+                            android:textColor="@color/dark_pink"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="8dp" />
+                        <EditText
+                            android:id="@+id/etName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:hint="Ordering name by"
+                            android:padding="12dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/edittext_background_pink" />
 
-</LinearLayout>
+                        <!-- Input Catatan Tambahan -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Additional Notes"
+                            android:textStyle="bold"
+                            android:textColor="@color/dark_pink"
+                            android:textSize="18sp"
+                            android:layout_marginBottom="8dp" />
+                        <EditText
+                            android:id="@+id/etNotes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black"
+                            android:hint="Enter any additional notes"
+                            android:padding="12dp"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/edittext_background_pink" />
+
+                        <!-- Tombol Pesan -->
+                        <Button
+                            android:id="@+id/btnOrder"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Place Order"
+                            android:textColor="@android:color/white"
+                            android:backgroundTint="@color/pink_dark"
+                            android:padding="12dp" />
+
+                </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</FrameLayout>
